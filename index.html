@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebo Estudantil - Mural Colaborativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>📚 Sebo Estudantil</h1>
+            <p>Economia, sustentabilidade e segurança dentro do seu campus.</p>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Formulário de Cadastro -->
+        <section class="form-section">
+            <h2>Anunciar Material</h2>
+            <form id="anuncio-form">
+                <div class="form-group">
+                    <label for="titulo">Título do Material:</label>
+                    <input type="text" id="titulo" placeholder="Ex: Livro Cálculo 1, Jaleco M" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" required>
+                        <option value="Livros">Livro / Apostila</option>
+                        <option value="Equipamentos">Calculadora / Eletrônico</option>
+                        <option value="Vestuário">Jaleco / Uniforme</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Oferta:</label>
+                        <select id="tipo" required>
+                            <option value="Venda">Venda</option>
+                            <option value="Troca">Troca</option>
+                            <option value="Doação">Doação</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="preco">Preço (R$):</label>
+                        <input type="number" id="preco" step="0.01" placeholder="0.00">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="instituicao">Universidade / Escola:</label>
+                        <input type="text" id="instituicao" placeholder="Ex: UFMG, IFSP" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campus">Campus / Cidade:</label>
+                        <input type="text" id="campus" placeholder="Ex: Campus Centro" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Seu WhatsApp (com DDD):</label>
+                    <input type="tel" id="whatsapp" placeholder="Ex: 11999998888" required>
+                </div>
+                <button type="submit" class="btn-submit">Publicar Anúncio</button>
+            </form>
+        </section>
+
+        <!-- Filtros e Listagem -->
+        <section class="mural-section">
+            <h2>Mural de Anúncios</h2>
+            <div class="filter-bar">
+                <input type="text" id="search-input" placeholder="Buscar por título, faculdade ou campus...">
+                <select id="filter-tipo">
+                    <option value="Todos">Todos os Tipos</option>
+                    <option value="Venda">Venda</option>
+                    <option value="Troca">Troca</option>
+                    <option value="Doação">Doação</option>
+                </select>
+            </div>
+
+            <div id="mural-cards" class="cards-grid">
+                <!-- Os cards serão gerados dinamicamente via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sebo Estudantil - Negociação presencial e sem frete.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
